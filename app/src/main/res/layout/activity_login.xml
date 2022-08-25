@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ASZ Counter"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_mobile"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:hint="Enter Mobile No."
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_security"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:hint="Enter Password"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="Login"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

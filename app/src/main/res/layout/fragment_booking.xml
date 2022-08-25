@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BookingActivity"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Your Mobile Number Below:"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:hint="Mobile Number"
+                android:inputType="phone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Type: "
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rgNation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbIndian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indian"
+                    android:minHeight="40dp"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rbForeign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foreigner"
+                    android:minHeight="40dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitors: "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtAdultPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/adultFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalAdultNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/adultFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtChildrenPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Children (₹ 20) : "
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/childrenFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalChildrenNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/childrenFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtStudentPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student (₹ 10) : "
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/studentFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalStudentNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/studentFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camera: "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtCameraPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camera (₹ 50) : "
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/cameraFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalCameraNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/cameraFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtDSLRPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DSLR (₹ 80) : "
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/dslrFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalDSLRNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/dslrFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtVideoPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video (₹ 100) : "
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/videoFigureNegate"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalVideoNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="0"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:textAlignment="center"/>
+
+                    <Button
+                        android:id="@+id/videoFigureAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="#D6E1F8"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indian       : "
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_ind_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text=""/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Foreigner : "
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_fore_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:text=""/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visitor Price:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginRight="15dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Camera Price:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginRight="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalVisitors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor=" #105810"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/totalCamera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor=" #105810"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/totalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor=" #105810"
+                        android:textAlignment="textEnd"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_50dp"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

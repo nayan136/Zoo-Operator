@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.TicketActivity"
+    android:layout_margin="@dimen/dimen_5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5dp">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/black_outline">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ASSAM STATE ZOO"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/tv_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DATE: 18-09-2021"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="[Counter Ticket]"
+                                android:textSize="10sp"
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <ImageView
+                                android:id="@+id/iv_qr"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height= "1dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_ticket_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TICKET NO: IWT0004"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Indian       : "
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:id="@+id/tv_ind_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:text=""
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Foreigner : "
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:id="@+id/tv_fore_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:text=""
+                                android:textColor="@color/black"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="3"
+                    android:paddingBottom="@dimen/dimen_10dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Fare:"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:textAlignment="textEnd"
+                            android:layout_marginRight="15dp"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Service Charge:"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:textAlignment="textEnd"
+                            android:layout_marginRight="15dp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount:"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textAlignment="textEnd"
+                            android:layout_marginRight="15dp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_fare"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textAlignment="textEnd"/>
+
+                            <TextView
+                                android:id="@+id/tv_convenient"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="11sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textAlignment="textEnd"/>
+
+                            <TextView
+                                android:id="@+id/totalAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textAlignment="textEnd"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height= "1dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="© AMTRON"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:textSize="10sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not Refundable"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not Transferable"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="NOT PAID"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dimen_10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Print"
+            android:layout_marginTop="@dimen/dimen_10dp"/>
+
+        <Button
+            android:id="@+id/btn_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Ticket"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            style="@style/successButton"
+            android:layout_marginLeft="@dimen/dimen_10dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.PaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket No:   "
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_ticket_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/bgBottomNavigation"/>
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="@dimen/dimen_10dp">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Indian       : "-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textStyle="bold"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_ind_details"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text=""/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Foreigner : "-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textStyle="bold"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_fore_details"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text=""/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/ll_ticket_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ticket Price:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="15dp"/>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="IPG Amount:"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAlignment="textEnd"-->
+<!--                android:layout_marginRight="15dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Charge:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="15dp"/>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="GST Amount:"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textAlignment="textEnd"-->
+<!--                android:layout_marginRight="15dp"/>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Payable Amount:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="15dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor=" #105810"
+                    android:textAlignment="textEnd"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_ipg"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor=" #105810"-->
+<!--                    android:textAlignment="textEnd"/>-->
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor=" #105810"
+                    android:textAlignment="textEnd"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_gst"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor=" #105810"-->
+<!--                    android:textAlignment="textEnd"/>-->
+                <TextView
+                    android:id="@+id/tv_payable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor=" #105810"
+                    android:textAlignment="textEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_qr_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan QR To Pay"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="------------------- OR -------------------"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter TXN Id"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"/>
+
+    <EditText
+        android:id="@+id/et_order_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"/>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Order No"
+        style="@style/errorButton"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
